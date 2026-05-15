@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAKTL | Ingeniería Digital</title>
+    <style>
+        /* --- ESTILOS BASE (MINIMALISTA DARK) --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth; /* Hace que el salto entre secciones sea suave */
+        }
+
+        body {
+            background-color: #0d0d0d;
+            color: #f2f2f2;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* --- MENÚ DE NAVEGACIÓN SUPERIOR --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(13, 13, 13, 0.8);
+            backdrop-filter: blur(10px); /* Efecto esmerilado sutil */
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: #ffffff;
+        }
+
+        nav a {
+            color: #a6a6a6;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-left: 30px;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        /* --- ESTRUCTURA DE SECCIONES --- */
+        section {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 10%;
+            border-bottom: 1px solid #1a1a1a; /* Línea divisoria sutil */
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* --- ESTILOS DE TEXTO --- */
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: 5px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #a6a6a6;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .sub-text {
+            font-size: 1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #8c8c8c;
+            margin-bottom: 25px;
+        }
+
+        /* Estilo rápido para los bloques de servicios que rellenaremos luego */
+        .grid-placeholder {
+            margin-top: 40px;
+            padding: 30px;
+            background: #141414;
+            border: 1px solid #262626;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">HAKTL</div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#sobre-haktl">Sobre Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <div class="container">
+            <h1>HAKTL</h1>
+            <p class="sub-text">Ingeniería Digital | San Juan</p>
+            <p>Soluciones eficientes basadas en Python y desarrollo web a medida.</p>
+        </div>
+    </section>
+
+    <section id="servicios">
+        <div class="container">
+            <h2>Servicios</h2>
+            <div class="grid-placeholder">
+                <p>[ Próximamente: Detalle de automatización de procesos, scripts utilitarios y diseño web exclusivo ]</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre-haktl">
+        <div class="container">
+            <h2>Sobre HAKTL</h2>
+            <p>Buscamos fusionar la precisión técnica de la ingeniería con la flexibilidad del entorno digital, optimizando tareas del día a día mediante software limpio y automatizaciones funcionales.</p>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>¿Tenés un proyecto en mente o una tarea que automatizar?</p>
+            <div class="grid-placeholder">
+                <p>[ Próximamente: Formulario de contacto directo ]</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
