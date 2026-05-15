@@ -35,11 +35,18 @@
             z-index: 1000;
         }
 
-        .logo {
+        /* El logo ahora es un enlace elegante */
+        .logo-link {
             font-size: 1.2rem;
             font-weight: 700;
             letter-spacing: 3px;
             color: #ffffff;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .logo-link:hover {
+            opacity: 0.8;
         }
 
         nav a {
@@ -207,15 +214,36 @@
             background-color: #e6e6e6;
         }
 
-        .submit-btn:active {
-            transform: scale(0.99);
+        /* --- PIE DE PÁGINA (FOOTER) --- */
+        footer {
+            padding: 40px 5%;
+            background-color: #080808;
+            text-align: center;
+            border-top: 1px solid #141414;
+        }
+
+        footer p {
+            font-size: 0.85rem;
+            color: #595959;
+            letter-spacing: 1px;
+        }
+
+        footer a {
+            color: #8c8c8c;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #ffffff;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">HAKTL</div>
+        <a href="#" target="_blank" class="logo-link">HAKTL</a>
         <nav>
             <a href="#inicio">Inicio</a>
             <a href="#servicios">Servicios</a>
@@ -285,6 +313,10 @@
             </div>
         </div>
     </section>
+
+    <footer>
+        <p>&copy; 2026 <a href="#" target="_blank">HAKTL</a>. Todos los derechos reservados. Precisión Técnica & Soluciones Digitales.</p>
+    </footer>
 
 </body>
 </html>
