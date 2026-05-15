@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            scroll-behavior: smooth; /* Hace que el salto entre secciones sea suave */
+            scroll-behavior: smooth;
         }
 
         body {
@@ -31,7 +31,7 @@
             justify-content: space-between;
             align-items: center;
             background: rgba(13, 13, 13, 0.8);
-            backdrop-filter: blur(10px); /* Efecto esmerilado sutil */
+            backdrop-filter: blur(10px);
             z-index: 1000;
         }
 
@@ -61,35 +61,44 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 80px 10%;
-            border-bottom: 1px solid #1a1a1a; /* Línea divisoria sutil */
+            padding: 100px 5%;
+            border-bottom: 1px solid #1a1a1a;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1100px;
             width: 100%;
             text-align: center;
         }
 
         /* --- ESTILOS DE TEXTO --- */
         h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: 700;
-            letter-spacing: 5px;
+            letter-spacing: 6px;
             margin-bottom: 15px;
             color: #ffffff;
         }
 
         h2 {
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: 600;
-            letter-spacing: 3px;
-            margin-bottom: 20px;
+            letter-spacing: 4px;
+            margin-bottom: 40px;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
             color: #ffffff;
         }
 
         p {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: #a6a6a6;
             line-height: 1.6;
             font-weight: 300;
@@ -97,17 +106,44 @@
 
         .sub-text {
             font-size: 1rem;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             text-transform: uppercase;
             color: #8c8c8c;
             margin-bottom: 25px;
         }
 
-        /* Estilo rápido para los bloques de servicios que rellenaremos luego */
-        .grid-placeholder {
-            margin-top: 40px;
-            padding: 30px;
-            background: #141414;
+        /* --- DISEÑO DE TARJETAS DE SERVICIOS (GRID) --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .service-card {
+            background: #121212;
+            border: 1px solid #262626;
+            padding: 40px 30px;
+            border-radius: 4px;
+            text-align: left;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .service-card:hover {
+            border-color: #404040; /* El borde se ilumina sutilmente al pasar el mouse */
+            transform: translateY(-5px); /* Efecto leve de elevación */
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+        }
+
+        /* Contenedor temporal para contacto */
+        .contact-box {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            background: #121212;
             border: 1px solid #262626;
             border-radius: 4px;
         }
@@ -129,21 +165,36 @@
         <div class="container">
             <h1>HAKTL</h1>
             <p class="sub-text">Ingeniería Digital | San Juan</p>
-            <p>Soluciones eficientes basadas en Python y desarrollo web a medida.</p>
+            <p style="max-width: 600px; margin: 0 auto;">Soluciones eficientes basadas en Python y desarrollo web a medida.</p>
         </div>
     </section>
 
     <section id="servicios">
         <div class="container">
             <h2>Servicios</h2>
-            <div class="grid-placeholder">
-                <p>[ Próximamente: Detalle de automatización de procesos, scripts utilitarios y diseño web exclusivo ]</p>
+            <div class="services-grid">
+                
+                <div class="service-card">
+                    <h3>Automatización</h3>
+                    <p>Desarrollo de scripts a medida en Python para optimizar tareas repetitivas, procesamiento de datos y control de flujos lógicos eficientes.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Ingeniería Digital</h3>
+                    <p>Resolución de problemas técnicos aplicando la precisión lítica de la ingeniería al entorno de software e infraestructura digital.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Web Única</h3>
+                    <p>Sitios exclusivos, rápidos y estables. Desarrollo nativo y limpio, diseñado específicamente para proyectar una identidad profesional sólida.</p>
+                </div>
+
             </div>
         </div>
     </section>
 
     <section id="sobre-haktl">
-        <div class="container">
+        <div class="container" style="max-width: 800px;">
             <h2>Sobre HAKTL</h2>
             <p>Buscamos fusionar la precisión técnica de la ingeniería con la flexibilidad del entorno digital, optimizando tareas del día a día mediante software limpio y automatizaciones funcionales.</p>
         </div>
@@ -152,9 +203,9 @@
     <section id="contacto">
         <div class="container">
             <h2>Contacto</h2>
-            <p>¿Tenés un proyecto en mente o una tarea que automatizar?</p>
-            <div class="grid-placeholder">
-                <p>[ Próximamente: Formulario de contacto directo ]</p>
+            <div class="contact-box">
+                <p style="margin-bottom: 20px;">¿Tenés un proyecto en mente o una tarea que optimizar?</p>
+                <p style="font-size: 0.9rem; color: #666;">[ Próximamente: Formulario de contacto directo ]</p>
             </div>
         </div>
     </section>
