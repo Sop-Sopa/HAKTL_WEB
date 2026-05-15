@@ -31,11 +31,10 @@ def enviar_correo(nombre, email_cliente, mensaje_cliente):
     msg['To'] = destinatario
 
     try:
-        # Conectamos e imprimimos el rastro en la consola
-        print("🔗 Intentando conectar con smtp.gmail.com...")
-        server = smtplib.SMTP('smtp.gmail.com', 587)
-        server.set_debuglevel(1)  # <<-- ESTO nos va a mostrar todo el diálogo con Google
-        server.starttls()
+        print("🔗 Intentando conectar con smtp.gmail.com usando puerto 465 (SSL)...")
+        # Cambiamos a SMTP_SSL y puerto 465 para saltear el bloqueo de Render
+        server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+        server.set_debuglevel(1)
         
         print("🔐 Intentando iniciar sesión...")
         server.login(remitente, password)
@@ -46,7 +45,6 @@ def enviar_correo(nombre, email_cliente, mensaje_cliente):
         print("✅ ¡Correo enviado con éxito!")
         return True
     except Exception as e:
-        # Si falla, esto va a escupir el motivo exacto en la pantalla negra de Render
         print(f"❌ ERROR CRÍTICO AL ENVIAR: {e}")
         return False
 
